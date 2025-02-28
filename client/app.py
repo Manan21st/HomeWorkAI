@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-BACKEND_URL = "http://localhost:8080/chat"
+BACKEND_URL = "http://backend:8080/chat"
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []  # Initialize chat history list

@@ -29,9 +29,7 @@ class ChatService:
         chat_history = self.messages
         stage_prompt = self.prompt_manager.get_stage_detection_prompt(self.messages, message)
         stage = self.chatbot.get_response(stage_prompt)
-        print(f"Stage: {stage}")
         prompt = self.prompt_manager.get_prompt_for_stage(stage, self.messages, message)
-        print(prompt)
         response = self.chatbot.get_response(prompt)
         self.messages.append({"role": "bot", "message": response})
 

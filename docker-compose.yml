@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: ./server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./server:/app
+    environment:
+      - ENV=production
+    restart: always
+    networks:
+      - homework-network
+
+  frontend:
+    build: ./client
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    volumes:
+      - ./client:/app
+    restart: always
+    networks:
+      - homework-network
+networks:
+  homework-network:

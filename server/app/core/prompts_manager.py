@@ -199,12 +199,8 @@ class PromptManager:
 
         # Debugging output
         if normalized_stage in stage_to_function:
-            print(f"Matched stage: {normalized_stage}")
+            return stage_to_function[normalized_stage](chat_history, user_message)
         else:
-            print(f"Invalid stage: {repr(stage)}")
             return self.general_follow_up_prompt(chat_history, user_message)
-
-        # Call the mapped function dynamically
-        return stage_to_function[normalized_stage](chat_history, user_message)
 
 
