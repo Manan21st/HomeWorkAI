@@ -1,0 +1,8 @@
+fastapi==0.115.9
+uvicorn==0.34.0
+pydantic==1.8.2
+requests==2.10.6
+pydantic-settings==2.8.1
+google-generativeai==0.8.4
+bs4==0.0.2
+leetscrape==1.0.1
