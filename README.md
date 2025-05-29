@@ -21,6 +21,7 @@ HomeWork AI is an intelligent teaching assistant designed to guide users through
 Ensure you have the following installed:
 - Docker
 - Docker Compose
+- Google Gemini API Key
 
 ### Running the Project
 
@@ -28,6 +29,18 @@ Ensure you have the following installed:
    ```sh
    git clone https://github.com/Manan21st/HomeWorkAI.git
    cd HomeWorkAI
+   ```
+
+- Set up environment variables:
+   ```sh
+   # Navigate to the server directory
+   cd server
+   
+   # Create a .env file and add your Google Gemini API key
+   echo "API_KEY=your_gemini_api_key_here" > .env
+   
+   # Go back to the root directory
+   cd ..
    ```
 
 - Start the project using Docker:
